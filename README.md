@@ -116,16 +116,6 @@ npm test
 
 The tests cover matcher behavior, source/document presence, the health endpoint, invalid payloads, and a valid API request.
 
-## Before submission
-
-- [ ] Review the challenge's exact submission requirements and AI-use disclosure rules.
-- [ ] Recheck official links and current scheme information.
-- [ ] Run `npm test` and manually test desktop/mobile layouts and keyboard navigation.
-- [ ] Confirm repository is public and contains one branch only, as required by the challenge.
-- [ ] Ensure repository size is below 10 MB and `node_modules/`, `.env`, credentials, and personal data are not committed.
-- [ ] Include screenshots or a short demo if the challenge allows them.
-- [ ] Make sure you understand the code and can explain the matching logic, limitations, and test results.
-
 ## Disclaimer
 
 Sahayak AI is an independent demo and is not affiliated with, endorsed by, or operated by any government department. It provides general information and navigation only, not legal advice or official eligibility decisions. Always confirm current rules and application instructions through official sources.
