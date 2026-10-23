@@ -86,8 +86,11 @@ function validateProfile(body) {
   return { ok: true, profile: { age, gender: body.gender, state: body.state, category: body.category, annualIncome: income, occupation: body.occupation, hasDisability: body.hasDisability, hasGirlChild: body.hasGirlChild, ownsLand: body.ownsLand, hasHealthCover: body.hasHealthCover, ruralResident: body.ruralResident } };
 }
 
-const server = app.listen(PORT, () => {
-  console.log(`Sahayak AI running at http://localhost:${PORT}`);
-});
+const server = process.env.VERCEL
+  ? null
+  : app.listen(PORT, () => {
+      console.log(`Sahayak AI running at http://localhost:${PORT}`);
+    });
 
+export default app;
 export { app, server };
