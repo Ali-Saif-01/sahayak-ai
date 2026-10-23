@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore public welfare and support resources with clear explanations and official links.">
+  <meta name="theme-color" content="#173f35">
+  <title>Sahayak AI — Public Welfare Guide</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Sahayak AI home">
+      <span class="brand-mark" aria-hidden="true">स</span>
+      <span><strong>Sahayak</strong><small>PUBLIC WELFARE GUIDE</small></span>
+    </a>
+    <span class="header-note"><span class="status-dot" aria-hidden="true"></span> Clear guidance. Official sources.</span>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SUPPORT SHOULD BE EASIER TO FIND</p>
+        <h1>Find support that<br><em>may fit your life.</em></h1>
+        <p class="hero-intro">Answer a few simple questions to explore government schemes and support resources that may be relevant to you.</p>
+        <div class="trust-row"><span aria-hidden="true">✓</span> No account needed <span aria-hidden="true">✓</span> No paid AI API <span aria-hidden="true">✓</span> Official links</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
+        <div class="art-card"><span class="art-sun">✳</span><span class="art-card-title">A little clarity<br>goes a long way.</span><span class="art-leaf">✦</span></div>
+        <div class="art-pill pill-top">Your next step</div><div class="art-pill pill-bottom">Made to be understood</div>
+      </div>
+    </section>
+
+    <section class="main-layout" aria-label="Scheme discovery">
+      <div class="form-panel">
+        <div class="section-heading">
+          <span class="step-badge">01</span>
+          <div><p class="eyebrow">YOUR PROFILE</p><h2>Let's understand your needs</h2><p class="muted">Only answer what's needed. We use these details to show relevant starting points.</p></div>
+        </div>
+        <form id="profile-form">
+          <div class="field-grid">
+            <div class="field">
+              <label for="age">Your age <span class="required">*</span></label>
+              <input id="age" name="age" type="number" min="0" max="120" step="1" required inputmode="numeric" placeholder="e.g. 24">
+            </div>
+            <div class="field">
+              <label for="gender">Gender <span class="required">*</span></label>
+              <select id="gender" name="gender" required>
+                <option value="">Select an option</option><option value="woman">Woman</option><option value="man">Man</option><option value="another">Another identity</option><option value="prefer-not-to-say">Prefer not to say</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="state">State / Union Territory <span class="required">*</span></label>
+              <select id="state" name="state" required><option value="">Choose your state / UT</option></select>
+            </div>
+            <div class="field">
+              <label for="category">Social category <span class="optional">(optional)</span></label>
+              <select id="category" name="category"><option value="prefer-not-to-say">Prefer not to say</option><option value="general">General</option><option value="sc">Scheduled Caste (SC)</option><option value="st">Scheduled Tribe (ST)</option><option value="obc">Other Backward Class (OBC)</option><option value="other">Other</option></select>
+            </div>
+            <div class="field">
+              <label for="annualIncome">Annual household income (₹) <span class="required">*</span></label>
+              <input id="annualIncome" name="annualIncome" type="number" min="0" max="1000000000" step="1" required inputmode="numeric" placeholder="e.g. 250000">
+              <small>Enter an estimate if you're unsure.</small>
+            </div>
+            <div class="field">
+              <label for="occupation">Main occupation <span class="required">*</span></label>
+              <select id="occupation" name="occupation" required><option value="">Choose an option</option><option value="student">Student</option><option value="farmer">Farmer</option><option value="salaried">Salaried employee</option><option value="self-employed">Self-employed</option><option value="unemployed">Unemployed / looking for work</option><option value="homemaker">Homemaker</option><option value="other">Other</option></select>
+            </div>
+          </div>
+          <fieldset class="question-group">
+            <legend>A few more details</legend>
+            <p class="muted">These answers help surface possible resources. They are not used to make an official decision.</p>
+            <div class="toggle-row"><div><strong>Do you own agricultural land?</strong><small>Relevant to some farmer support programmes.</small></div><label class="switch"><input type="checkbox" name="ownsLand"><span aria-hidden="true"></span><span class="sr-only">I own agricultural land</span></label></div>
+            <div class="toggle-row"><div><strong>Are you or a family member living with a disability?</strong><small>Helps find disability-related support information.</small></div><label class="switch"><input type="checkbox" name="hasDisability"><span aria-hidden="true"></span><span class="sr-only">Disability support may be relevant</span></label></div>
+            <div class="toggle-row"><div><strong>Is there a girl child in your family?</strong><small>May help you explore savings resources.</small></div><label class="switch"><input type="checkbox" name="hasGirlChild"><span aria-hidden="true"></span><span class="sr-only">There is a girl child in my family</span></label></div>
+            <div class="toggle-row"><div><strong>Do you currently have health insurance / health cover?</strong><small>Used only as a signpost, not as an eligibility rule.</small></div><label class="switch"><input type="checkbox" name="hasHealthCover"><span aria-hidden="true"></span><span class="sr-only">I currently have health cover</span></label></div>
+            <div class="toggle-row"><div><strong>Do you live in a rural area?</strong><small>May be relevant to some programmes.</small></div><label class="switch"><input type="checkbox" name="ruralResident"><span aria-hidden="true"></span><span class="sr-only">I live in a rural area</span></label></div>
+          </fieldset>
+          <div class="privacy-note"><span aria-hidden="true">♧</span><p><strong>Your details stay in this session.</strong><br>This demo does not create an account or save your profile to a database.</p></div>
+          <button class="primary-button" type="submit"><span>Explore possible matches</span><span aria-hidden="true">↗</span></button>
+          <p class="form-footnote">Fields marked * are required. You can change your answers and search again.</p>
+        </form>
+      </div>
+
+      <aside class="side-panel">
+        <div class="side-card">
+          <span class="side-icon" aria-hidden="true">✳</span>
+          <h3>How Sahayak helps</h3>
+          <ol class="how-list">
+            <li><span>1</span><div><strong>Tell us a little</strong><p>Share basic details relevant to support options.</p></div></li>
+            <li><span>2</span><div><strong>See why it appeared</strong><p>Each result explains which signposts matched.</p></div></li>
+            <li><span>3</span><div><strong>Verify with official sources</strong><p>Use official portals to confirm current rules.</p></div></li>
+          </ol>
+        </div>
+        <div class="side-card resource-card">
+          <p class="eyebrow">A QUICK REMINDER</p>
+          <h3>Guidance, not a guarantee.</h3>
+          <p>Scheme rules change, and some benefits depend on records or state-specific criteria we cannot verify here.</p>
+          <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer">Browse myScheme.gov.in <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="side-foot">Built for clarity and access. Not affiliated with any government department.</p>
+      </aside>
+    </section>
+
+    <section id="results-section" class="results-section" hidden aria-labelledby="results-title">
+      <div class="results-header"><div><p class="eyebrow">02 / YOUR STARTING POINTS</p><h2 id="results-title">Resources to explore</h2><p class="muted" id="results-summary"></p></div><button id="edit-profile" class="secondary-button" type="button">Edit answers</button></div>
+      <div id="results-status" class="results-status" role="status" aria-live="polite"></div>
+      <div id="results-grid" class="results-grid"></div>
+      <div class="disclaimer"><strong>Please verify before applying.</strong> Results are generated from a small curated dataset and transparent signpost rules. They are not official eligibility decisions, legal advice, or a guarantee of benefits. Always confirm current eligibility, documents, deadlines, and application steps through the linked official source.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">स</span><span><strong>Sahayak</strong><small>PUBLIC WELFARE GUIDE</small></span></a><p>Small steps toward better access to public information.</p><span>© <span id="year"></span> Sahayak AI · Community-built demo</span></footer>
+</body>
+</html>

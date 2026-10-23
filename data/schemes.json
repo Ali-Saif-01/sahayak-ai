@@ -1,0 +1,142 @@
+[
+  {
+    "id": "pm-kisan",
+    "name": "PM-KISAN Samman Nidhi",
+    "category": "Agriculture",
+    "summary": "Income-support scheme for eligible landholding farmer families. Exclusions and land-record requirements apply.",
+    "officialUrl": "https://pmkisan.gov.in/",
+    "sourceLabel": "Official PM-KISAN portal",
+    "documents": [
+      "Aadhaar details, as required by the portal",
+      "Bank account details",
+      "Landholding records",
+      "Any documents requested by the official portal"
+    ],
+    "note": "This assistant does not verify land records, exclusion categories, or current payment status. Use the official portal to confirm requirements.",
+    "rules": [
+      {
+        "label": "Occupation: farmer",
+        "explanation": "You selected farmer as your occupation.",
+        "test": "occupation"
+      },
+      {
+        "label": "Landholding",
+        "explanation": "You indicated that you own agricultural land. Official land records and exclusions still need verification.",
+        "test": "ownsLand"
+      }
+    ]
+  },
+  {
+    "id": "ayushman-bharat-pmjay",
+    "name": "Ayushman Bharat – PM-JAY",
+    "category": "Healthcare",
+    "summary": "Publicly funded health assurance for eligible families, based on scheme-specific beneficiary identification and applicable state arrangements.",
+    "officialUrl": "https://pmjay.gov.in/",
+    "sourceLabel": "Official PM-JAY portal",
+    "documents": [
+      "Identity proof requested by the official beneficiary-check process",
+      "Ration card or other family document if requested",
+      "Any records requested by an empanelled hospital or official portal"
+    ],
+    "note": "Income or having no health cover alone does not establish eligibility. Check beneficiary status and your state's current arrangements on the official portal.",
+    "rules": [
+      {
+        "label": "Health cover may be relevant",
+        "explanation": "You indicated that you do not currently have health cover; this is a signpost only, not an eligibility rule.",
+        "test": "noHealthCover"
+      }
+    ]
+  },
+  {
+    "id": "national-scholarship-portal",
+    "name": "National Scholarship Portal",
+    "category": "Education",
+    "summary": "A government portal that lists scholarship opportunities. Eligibility depends on the specific scholarship, course, institution, income and other rules.",
+    "officialUrl": "https://scholarships.gov.in/",
+    "sourceLabel": "Official National Scholarship Portal",
+    "documents": [
+      "Student identity and academic details",
+      "Enrollment or institution details",
+      "Income certificate if required",
+      "Category or disability certificate if relevant to the chosen scholarship",
+      "Bank details if required"
+    ],
+    "note": "The portal includes multiple schemes; this result is a discovery suggestion, not confirmation that a particular scholarship is open or that you qualify.",
+    "rules": [
+      {
+        "label": "Student",
+        "explanation": "You selected student as your occupation.",
+        "test": "student"
+      },
+      {
+        "label": "Income information supplied",
+        "explanation": "You supplied an annual household income amount to help narrow down scholarship information.",
+        "test": "incomeKnown"
+      }
+    ]
+  },
+  {
+    "id": "nsap",
+    "name": "National Social Assistance Programme (NSAP)",
+    "category": "Social support",
+    "summary": "Social assistance programme that includes pension-related support for eligible groups; criteria and implementation can vary by component and state.",
+    "officialUrl": "https://nsap.nic.in/",
+    "sourceLabel": "Official NSAP portal",
+    "documents": [
+      "Age proof, where relevant",
+      "Income or BPL-related records if required",
+      "Residence details",
+      "Bank or payment details if required by the applicable process"
+    ],
+    "note": "This broad discovery result does not determine eligibility for any pension component. Confirm age, household criteria, and state rules through official channels.",
+    "rules": [
+      {
+        "label": "Age may be relevant",
+        "explanation": "You are aged 60 or above, which may be relevant to some old-age assistance components. The official component rules must be checked.",
+        "test": "age60"
+      }
+    ]
+  },
+  {
+    "id": "sukanya-samriddhi",
+    "name": "Sukanya Samriddhi Account",
+    "category": "Savings",
+    "summary": "Small-savings scheme intended for a girl child, with account-opening rules and conditions set by the government.",
+    "officialUrl": "https://www.indiapost.gov.in/",
+    "sourceLabel": "India Post official website",
+    "documents": [
+      "Girl child's birth certificate",
+      "Guardian identity and address proof",
+      "Other documents requested by the bank or post office"
+    ],
+    "note": "This is a general signpost. Confirm current account-opening conditions and interest details with India Post or an authorised bank.",
+    "rules": [
+      {
+        "label": "Girl child in family",
+        "explanation": "You indicated that your family has a girl child. Account eligibility depends on the child's age and scheme rules, which this short form does not collect.",
+        "test": "girlChild"
+      }
+    ]
+  },
+  {
+    "id": "disability-support",
+    "name": "Disability-related government support",
+    "category": "Accessibility",
+    "summary": "A starting point for finding disability certificates, assistive-device programmes and relevant central/state services.",
+    "officialUrl": "https://depwd.gov.in/",
+    "sourceLabel": "Department of Empowerment of Persons with Disabilities",
+    "documents": [
+      "Disability certificate or UDID details if applicable",
+      "Identity and residence proof",
+      "Documents listed by the specific programme"
+    ],
+    "note": "This is a navigation suggestion, not a single benefit scheme. Programmes, criteria and application routes differ; use the official department and state portals.",
+    "rules": [
+      {
+        "label": "Disability support may be relevant",
+        "explanation": "You indicated that you or a family member has a disability; this can help you explore official support options.",
+        "test": "disability"
+      }
+    ]
+  }
+]
